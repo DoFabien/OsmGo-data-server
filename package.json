@@ -1,0 +1,24 @@
+{
+  "name": "osm-go-server-data",
+  "preferGlobal": true,
+  "version": "0.0.1",
+  "author": "Fabien",
+  "description": "Load & transform OSM data for Osm Go!",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "start": "node --max_old_space_size=2000  index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "lodash": "^4.16.4",
+    "sync-request": "^3.0.1",
+    "turf": "^3.0.14",
+    "xmldom": "^0.1.22"
+  }
+}
