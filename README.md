@@ -1,7 +1,7 @@
 # OsmGo-data-server
 - DL Osm data from API06 or Overpassapi
 - Convert XML data to Geojson 
-- Porcessing => formated data for Osm Go!
+- Processing => formated data for Osm Go!
 - Serve data
 
 

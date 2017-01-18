@@ -35,14 +35,11 @@ function filterGeojson(geojson, keys, filterKeys) {
     for (let i = 0; i < features.length; i++) {
         let feature = features[i];
         if (!feature.properties.tainted) { // !relation incomplete
-            if (filterKeys) { // on ne filtre pas
-                if (getPrimaryKeyOfObject(feature.properties.tags, keys)) { // !aucun tag interessant
+            let primaryTag = getPrimaryKeyOfObject(feature.properties.tags, keys);
+                if (primaryTag) { // !aucun tag interessant
+                    feature.properties['primaryTag'] = primaryTag;
                     filterFeatures.push(feature);
                 }
-            } else {
-                filterFeatures.push(feature);
-            }
-
         }
     }
     return { "type": "FeatureCollection", "features": filterFeatures };
